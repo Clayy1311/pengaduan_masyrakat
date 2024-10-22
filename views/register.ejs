@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - LAPOR!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dc3545;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-size: 14px; /* Ukuran font dasar yang lebih kecil */
+        }
+        .container {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 480px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1.4em; /* Ukuran judul yang lebih kecil */
+        }
+        .info-box {
+            background-color: #0056b3;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 0.85em;
+        }
+        .social-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        .social-button {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+        .facebook { background-color: #3b5998; }
+        .twitter { background-color: #1da1f2; }
+        .google { background-color: #db4437; }
+        .divider {
+            text-align: center;
+            margin: 15px 0;
+            color: #777;
+            font-size: 0.9em;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        input, select {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 0.9em;
+        }
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 0.9em;
+        }
+        .checkbox-group input {
+            width: auto;
+            margin-right: 8px;
+        }
+        .submit-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 15px;
+            font-size: 1em;
+        }
+        label {
+            font-size: 0.9em;
+            display: block;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Daftar</h2>
+        <div class="info-box">
+            Dengan mendaftar saya menyetujui data saya digunakan untuk SAMBAT! untuk melakukan tindak lanjut pengaduan sebagaimana prosedur penanganan SAMBAT! sesuai dengan Peraturan Presiden Nomor 96 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik.
+        </div>
+        <div class="social-buttons">
+            <button class="social-button facebook">FACEBOOK</button>
+            <button class="social-button twitter">TWITTER</button>
+        </div>
+        <button class="social-button google">GOOGLE</button>
+        <div class="divider">Atau</div>
+        <form action="/registercheck">
+            <div class="form-grid">
+                <div>
+                    <label for="nik">NIK</label>
+                    <input type="text" id="nik" placeholder="Nomor Induk Kependudukan (NIK)" required>
+                </div>
+                <div>
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Nama Lengkap" required>
+                </div>
+                <div>
+                    <label for="tempat-lahir">Tempat Tanggal Lahir</label>
+                    <input type="text" id="tempat-lahir" placeholder="Kota Tempat Tanggal Lahir" required>
+                </div>
+                <div>
+                    <label for="tanggal-lahir">Tanggal Lahir</label>
+                    <input type="date" id="tanggal-lahir" required>
+                </div>
+                <div>
+                    <label for="jenis-kelamin">Jenis Kelamin</label>
+                    <select id="jenis-kelamin" required>
+                        <option value="">Pilih Jenis Kelamin</option>
+                        <option value="laki-laki">Laki-laki</option>
+                        <option value="perempuan">Perempuan</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="no-telp">No. Telp Aktif</label>
+                    <input type="tel" id="no-telp" placeholder="Minimal 8-14 Angka" required>
+                </div>
+                <div>
+                    <label for="pekerjaan">Pekerjaan</label>
+                    <select id="pekerjaan" required>
+                        <option value="">Pilih Pekerjaan</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="penyandang-disabilitas">Penyandang Disabilitas?</label>
+                    <select id="penyandang-disabilitas" required>
+                        <option value="">Pilih Status</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="email@contoh.com" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div>
+                    <label for="password-confirmation">Password Confirmation</label>
+                    <input type="password" id="password-confirmation" required>
+                </div>
+            </div>
+            <div class="checkbox-group full-width">
+                <input type="checkbox" id="anonymity" required>
+                <label for="anonymity">Apakah Anda ingin merahasiakan profil yang dapat diidentifikasi?</label>
+            </div>
+            <div class="checkbox-group full-width">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Saya telah membaca dan menyetujui Syarat dan Ketentuan Layanan</label>
+            </div>
+            <button type="submit" class="submit-btn">DAFTAR</button>
+        </form>
+    </div>
+</body>
+</html>
